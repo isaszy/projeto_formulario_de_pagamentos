@@ -1,0 +1,46 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<br>
+<h3>Lançamento de pagamentos</h3>
+<br>
+
+  {% for post in posts %}
+  <br><br>
+
+<table border="1">
+<form action='/voxus/mudar' method='post'>
+
+    <td>
+  <p><b>id </b> <input type="text" name="id" value="{{post.id}}"></p>
+  <p><b>Titulo </b> <input type="text" name="titulo" value="{{post.titulo}}"></p> 
+  <p><b>Valor </b>  <input type="text" name="valor" value="{{post.valor}}"></p>
+  <p><b>Imposto </b> <input type="text" name="imposto"  value="{{post.imposto}}"></p>
+  <p><b>Data </b> <input type="text" name="data_pagamento"  value="{{post.data_pagamento}}"></p>
+  <p><b>Comentarios </b>  <textArea id='comentarios' name='comentarios'>{{post.comentarios}}</textArea></p>
+
+</td>
+
+
+    <td><input type='submit' value='Alterar'></td>
+
+</form>
+
+  <td>
+<form action="/voxus/deletar" method='post'>
+  <input type="hidden" name="id"  value="{{post.id}}">
+  <input type='submit' value='Excluir'>
+</td>
+  </form>
+
+</table>
+
+
+  {% else %}
+    <p>Nenhum registro de pagamento</p>
+  {% endfor %}
+  <br><br>
+{% endblock %}
+

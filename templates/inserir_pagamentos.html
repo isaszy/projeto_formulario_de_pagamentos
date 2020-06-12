@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<link rel="stylesheet" href="https://yandex.st/highlightjs/7.3/styles/default.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Chivo:400,700" rel="stylesheet">
+
+
+<div class='cabecalho'>
+    <h1>Formulário de pagamento</h1>
+</div>
+<div class='conteudo'>
+    <form action='/voxus/gravar' method='post'>
+
+        <input id='id' type='hidden' value='' name='id' required>
+        <input id='imposto' type='hidden' name='imposto' value='' readonly>
+        
+        <p>
+            <label for='titulo'> Título de lançamento de pagamento: </label><br>
+            <input id='titulo' minlength="5" maxlength="100" type='text' name='titulo' required>
+        </p>  
+
+        <p>
+            <label for='valor'>Valor do pagamento: </label><br>
+            <input id='valor' type='number' name='valor' type="number" step="0.01" required>
+        </p>
+
+        <p>
+            <label for='data_pagamento'> Data: </label><br>
+            <input id='data_pagamento' name='data_pagamento' type="date" value='' required>
+        </p>   
+
+		<p>
+            <label for='comentarios'> Comentário: </label><br>
+            <textArea id='comentarios' name='comentarios'></textArea>
+        </p> 		
+        
+        <p>
+            <input type='submit' value='Enviar'>
+        </p>
+    </form>
+</div>
+
+{% endblock %}

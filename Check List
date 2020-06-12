@@ -1,0 +1,14 @@
+1° Criar uma página web executavel: (Página Web que possua servidor, no caso se escolheu Flask); (Concluído totalmente)
+2° Limite de caracteres para o campo titulo (Minimo de 5, máximo de 100); (Totalmente concluído)
+3° O campo data deve ser inserido no formato (YYYY-m-dd) -provavel que será necessário uma mascara feita em JavaScript-, a data vai ter que ser do tipo String; (Parcialmente concluído)
+4° O valor do imposto tem que ser 5% do valor do pagamento;
+5° Imposto tem que ser salvo em float no banco de dados;
+6° A caixa de comentários é opcional; (Concluído totalmente)
+7° Listar todos os registros de pagamento do banco de dados e todas as colunas, inclusive o id; (Totalmente concluído)
+8° Criar um botão de excluir um registro do banco de dados por um click na mesma tela que lista; (Concluído totalmente)
+9° Na lista de pagamento tem que ser possível editar os registros; (Concluído totalmente)
+10° Criar uma tela em html que permita inserir um arquivo .xlsx (ou csv) dentro do programa (Concluído totalmente);
+11° Os dados do arquivo.xlsx (ou csv) podem Pagamentos são salvos dentro de um arquivo .xlsx
+12° Buscar dados da tabela pay e colocar no arquivo .xlsx
+13° Permitir baixar o arquivo .xlsx com os dados da busca da tabela pay
+14° Em caso de novos registros no arquivo .xlsx inserir dados novos no banco de dados

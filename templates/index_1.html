@@ -1,0 +1,23 @@
+<!-- index.html -->
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<br>
+<h3>Lançamento de pagamentos</h3>
+<br>
+
+  {% for post in posts %}
+  <b>-------------------------------------------------------</b><br><br>
+  <p><b>id </b> {{post.id}}</p>
+  <p><b>Titulo </b> {{post.titulo}}</p> 
+  <p><b>Valor </b> {{post.valor}}</p>
+  <p><b>Imposto </b>{{post.imposto}}</p>
+  <p><b>Data </b>{{post.data_pagamento}}</p>
+  <p><b>Comentarios </b>{{post.comentarios}}</p>
+  {% else %}
+    <p>Nenhum registro de pagamento</p>
+  {% endfor %}
+  <b>-------------------------------------------------------</b><br><br>
+{% endblock %}
+
