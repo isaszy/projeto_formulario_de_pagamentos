@@ -16,11 +16,11 @@ pip3 install -r requirements.txt
 
 ou 
 
-navegue até ven/bin/ 
 
-´´´
+```
+cd venv/bin
 pip freeze > requirements.txt
-´´´
+```
 
 5)Digite o comando:
 ```
